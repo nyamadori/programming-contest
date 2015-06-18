@@ -11,3 +11,4 @@ AOJ (Aizu Online Judge) で解いたプログラム集。
 [等しい合計点](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2008/A.rb)|ICPC国内予選2008A|Ruby
 [koukyoukoukokukikou](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_mock_2011/A.rb)|ICPC模擬国内予選2011A|Ruby
 [Red and Black](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2004/B.rb)|ICPC国内予選2004B|Ruby
+[ICPCの順位付け](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2013/B.rb)|国内予選2013B|Ruby
