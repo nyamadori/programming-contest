@@ -6,18 +6,21 @@ def find_chunks(board)
   chunks = []
   
   board.each_with_index do |row, i|
-    prev = nil
+    start = nil
     cnt = 1
-    
+
     row.each_with_index do |p, j|
-      if p == row[j + 1]
+      if p && p == row[j + 1]
+        start ||= j
         cnt += 1
       else
-        chunks << {
-          :row => i,
-          :start => j - cnt + 1,
-          :end => j
-        } if cnt >= 3
+        if cnt >= 3
+          chunks << {point: row[start], row: i, start: start, cnt: cnt}
+        end
+
+        cnt = 1
+        start = nil
+        
       end
     end
   end
@@ -25,36 +28,40 @@ def find_chunks(board)
   chunks
 end
 
+def calc_points(chunks)
+  chunks
+    .map {|c| c[:point] * c[:cnt] }
+    .inject(0, :+)
+end
+
 def eliminate(board, chunks)
   chunks.each do |chunk|
     row = board[chunk[:row]]
-    row.fill(nil, chunk[:start]..chunk[:end])
+    row.fill(nil, chunk[:start], chunk[:cnt])
   end
 end
 
-def fall_blocks(board, chunks)
-  board.reverse_each.each_with_index do |row, i|
-    row.each_with_index do |p, j|
-      next unless p
+def fall_blocks(board)
+  while true
+    cont = false
 
-      stop = nil
+    (0..board.size - 1).reverse_each do |i|
+      board[i].each_with_index do |p, j|
+        break if i == 0
+        ap = board[i - 1][j]
 
-      (i+1 .. board.size-1).each do |k|
-        under = board[k]
-        break if under.nil?
-        p = under[j]
+        if !p && ap
+          #swap
+          board[i][j] = ap
+          board[i - 1][j] = p
 
-        break if p
-        stop = k
-      end
-
-      puts [i, j, stop, p].join(', ')
-      
-      if stop
-        board[i][j] = nil
-        board[stop][j] = p
+          cont = true
+        end
       end
     end
+
+    return unless cont
+
   end
 end
 
@@ -68,10 +75,16 @@ while true
     board << gets.scanf('%d %d %d %d %d')
   end
 
-  chunks = find_chunks(board)
-  pp chunks
-  eliminate(board, chunks)
-  pp board
-  fall_blocks(board, chunks)
-  pp board
+  points = 0
+
+  while true
+    chunks = find_chunks(board)
+    break if chunks.size == 0
+
+    points += calc_points(chunks)
+    eliminate(board, chunks)
+    fall_blocks(board)
+  end
+
+  puts points
 end
