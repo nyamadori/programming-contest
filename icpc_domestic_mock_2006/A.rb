@@ -37,14 +37,16 @@ class Robot
       vx = -1
     end
 
-    n.times do
-      @ngem += 1 if @map[@y][@x]
+    n.times do |i|
       @x += vx
       @y += vy
-    end
-  end
 
-  
+      if @map[@y][@x]
+        @ngem += 1
+        @map[@y][@x] = nil
+      end
+    end
+  end  
 end
 
 while true
@@ -60,21 +62,19 @@ while true
     x, y = scanf('%d %d')
     map[y][x] = true
   end
-
-  puts map.map{|r| r.map{|c| c ? 'X' : '_' }.join('')}.join("\n")
   
   m, = scanf('%d')
   robot = Robot.new(map, 10, 10)
   
   # 命令を記録
   m.times do
-    dir, n = scanf('%c %d')
-    robot.go(dir, n)
+    dir, len = scanf('%c %d')
+    robot.go(dir, len)
   end
 
   if robot.ngem == n
-    puts 'yes'
+    puts 'Yes'
   else
-    puts 'no'
+    puts 'No'
   end
 end
