@@ -15,3 +15,6 @@ AOJ (Aizu Online Judge) で解いたプログラム集。
 [Matsuzaki数](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_mock_2009/B.rb)|[ICPC模擬国内予選2009B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2150)|Ruby
 [世界の天秤](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2011/B.rb)|[ICPC国内予選2011B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1173&lang=jp)|Ruby
 [連鎖消滅パズル](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2014/B.rb)|[ICPC国内予選2014B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1193&lang=jp)|Ruby
+[ログイン/ログアウト記録の解析](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2007/B.rb)|[ICPC国内予選2007B](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1148&lang=jp)|Ruby
+[Misterious Gems](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_mock_2006/A.rb)|[ICPC国内模擬予選2006A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2000&lang=jp)|Ruby
+[次期町長](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2009/A.rb)|[ICPC国内予選2009A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1159&lang=jp)|Ruby
