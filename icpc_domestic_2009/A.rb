@@ -2,42 +2,44 @@
 
 require 'scanf'
 
-def check_hands(hands, pi)
-  hands.each_with_index do |h, i|
-    return false if h != 0 && i != pi
+def scanf(format)
+  line = gets
+  if line
+    line.scanf(format)
+  else
+    []
   end
-
-  return true
 end
 
 while true
-  n, p = gets.scanf('%d %d')
-
+  n, p = scanf('%d %d')
   break if n == 0 && p == 0
 
-  hands = Array.new(n, 0)
+  bowl = p
+  players = Array.new(n, 0)
+  winner = nil
 
   while true
-    game_end = false
-    winner = nil
+    finish = false
 
-    hands.each_with_index do |h, i|
-      if p == 0
-        p += hands[i]
-        hands[i] = 0
-      elsif p == 1 && check_hands(hands, h)
-        game_end = true
-        winner = h
-        break
+    players.each_with_index do |nstone, i|
+      if bowl >= 1
+        bowl -= 1
+        players[i] += 1
       else
-        p -= 1
-        hands[i] += 1
+        players[i] = 0
+        bowl += nstone
+      end
+      
+      if bowl == 0 && players[i] == p
+        winner = i
+        finish = true
+        break
       end
     end
 
-    if game_end
-      puts winner
-      break
-    end
+    break if finish
   end
+
+  puts winner
 end
