@@ -4,7 +4,7 @@ AOJ (Aizu Online Judge) で解いたプログラム集。
 
 ## 解けた問題
 
-問題名|出典|言語
+問題名|出典|解いたプログラム
 :--|:--|:--
 ICPC得点集計ソフトウェア|[ICPC国内予選2007A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1147&lang=jp)|[Ruby](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2007/A.rb)
 Hanafuda Shuffle|[ICPC国内予選2004A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1129&lang=jp)|[Ruby](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2004/A.rb)
