@@ -19,3 +19,9 @@ Matsuzaki数|[ICPC模擬国内予選2009B](http://judge.u-aizu.ac.jp/onlinejudge
 Misterious Gems|[ICPC国内模擬予選2006A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2000&lang=jp)|[Ruby](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_mock_2006/A.rb)
 次期町長|[ICPC国内予選2009A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1159&lang=jp)|[Ruby](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2009/A.rb)
 ミレニアム|[ICPC国内予選2012A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1179&lang=jp)|[C言語](https://github.com/nyamadori/aoj/blob/master/icpc_domestic_2012/A.c)
+
+## paiza オンラインハッカソン
+
+問題名|問題文|解いたプログラム
+:--|:--|:--
+POH! Vol.6「古代コボールすごろくで古代コボール王Ⅳ世を撃破せよ！」| [問題](https://paiza.jp/poh/joshibato/kirishima) | [Ruby](https://github.com/nyamadori/aoj/blob/master/paiza6/kirishima.rb)
