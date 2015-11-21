@@ -21,7 +21,7 @@ Misterious Gems|[ICPC国内模擬予選2006A](http://judge.u-aizu.ac.jp/onlineju
 ミレニアム|[ICPC国内予選2012A](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1179&lang=jp)|[C言語](programming-contest/icpc_domestic_2012/A.c)
 
 ## paiza オンラインハッカソン
-programming-contest/icpc_domestic_2007/A.rb
+
 問題名|問題文|解いたプログラム
 :--|:--|:--
 POH! Vol.6「古代コボールすごろくで古代コボール王Ⅳ世を撃破せよ！」| [問題](https://paiza.jp/poh/joshibato/kirishima) | [Ruby](programming-contest/paiza6/kirishima.rb)
