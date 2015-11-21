@@ -1,6 +1,6 @@
-# aoj
+# programming-contest
 
-AOJ (Aizu Online Judge) で解いたプログラム集。
+プログラミングコンテストで書いたコードたち。
 
 ## 解けた問題
 
